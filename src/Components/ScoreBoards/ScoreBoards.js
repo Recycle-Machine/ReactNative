@@ -4,12 +4,23 @@ import {
     Text,
     StyleSheet,
     TouchableOpacity,
+    ImageBackground,
 } from 'react-native'
 import Colors from '../../res/Colors'
 
+    const friendsImage = {
+        uri: 'https://www.dropbox.com/s/ziyj8jdbk1xyvo6/friends.png?raw=1',
+    };
+    const careerImage = {
+        uri: 'https://www.dropbox.com/s/jynq9pd7tlg7xin/career.png?raw=1',
+    };
+    const schoolsImage = {
+        uri: 'https://www.dropbox.com/s/5cmpxsgy1j63qwi/school.png?raw=1',
+    };
+
 class ScoreBoards extends React.Component {
     handlePress = () => {
-        this.props.navigation.navigate('Login');
+        this.props.navigation.navigate('Land');
     };
 
     render() {
@@ -19,15 +30,15 @@ class ScoreBoards extends React.Component {
                     <Text style={styles.scoreInputText}>ScoreBoards</Text>
                     <TouchableOpacity style={styles.scoreButton} onPress={this.handlePress}>
                         <Text style={styles.scoreButtonText}>Friends</Text>
-                        <View style={styles.icon1}></View>
+                        <ImageBackground style={styles.icon1} source={friendsImage}></ImageBackground>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.scoreButton} onPress={this.handlePress}>
                         <Text style={styles.scoreButtonText}>Carrer</Text>
-                        <View style={styles.icon2}></View>
+                        <ImageBackground style={styles.icon2} source={careerImage}></ImageBackground>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.scoreButton} onPress={this.handlePress}>
                         <Text style={styles.scoreButtonText}>Schools</Text>
-                        <View style={styles.icon3}></View>
+                        <ImageBackground style={styles.icon3} source={schoolsImage}></ImageBackground>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -44,16 +55,17 @@ const styles = StyleSheet.create({
         fontSize: 40,
         marginTop: '-40%',
         textAlign: 'center',
-        color: Colors.charade,
+        color: Colors.white,
         marginBottom: 5,
     },
     scoreLayerColor: {
         flex: 2,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: Colors.greenLight,
     },
     scoreButton: {
-        backgroundColor: Colors.Azabache,
+        backgroundColor: Colors.blueDark,
         color: Colors.white,
         width: '80%',
         height: '13%',
@@ -70,25 +82,22 @@ const styles = StyleSheet.create({
         color: Colors.white,
     },
     icon1: {
-        backgroundColor: Colors.white,
-        width: '20%',
+        width: '45%',
         height: '90%',
         marginTop: '-15%',
-        marginLeft: '5%'
+        marginLeft: '4%'
     },
     icon2: {
-        backgroundColor: Colors.white,
-        width: '20%',
+        width: '45%',
         height: '90%',
         marginTop: '-15%',
-        marginLeft: '5%'
+        marginLeft: '4%'
     },
     icon3: {
-        backgroundColor: Colors.white,
-        width: '20%',
+        width: '45%',
         height: '90%',
         marginTop: '-15%',
-        marginLeft: '5%'
+        marginLeft: '4%'
     },
 });
 
