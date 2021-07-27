@@ -10,111 +10,143 @@ import {
 } from 'react-native'
 import Colors from '../../res/Colors'
 
-const imageBackground = {
-    uri: 'https://i.pinimg.com/originals/5c/eb/ef/5cebefbae1a761eb47a6c1a94ca2fcf3.png',
-};
+    const imageBackground = {
+        uri: 'https://www.dropbox.com/s/43mkiz2sqxcdwcj/tree-plant.png?raw=1',
+    };
+    const emailImage = {
+        uri: 'https://www.dropbox.com/s/oixlggx2qi8n5hk/e-mail.png?raw=1',
+    };
+    const lockImage = {
+        uri: 'https://www.dropbox.com/s/utr2u7j6aoktlp3/lock.png?raw=1',
+    };
 
-class LogIn extends React.Component {
+class SignUp extends React.Component {
     handlePress = () => {
         this.props.navigation.navigate('Scoreboards');
     };
 
     render() {
-        return (
+        return(
             <ScrollView style={styles.loginContainer}>
-                <ImageBackground source={imageBackground} style={styles.image}>
-                    <View style={styles.loginLayerColor}>
+                <View style={styles.layerColor}>
+                    <ImageBackground source={imageBackground} style={styles.image}>
                         <View style={styles.loginBackground}>
-                            <View style={styles.loginForm}>
+                            <View style={styles.form}>
                                 <Text style={styles.loginInputText}>User Login</Text>
                                 <TextInput style={styles.loginInput} placeholder={'Email'}></TextInput>
-                                <View style={styles.loginIcon1}></View>
-                                <TextInput style={styles.loginInput} placeholder={'Password'}></TextInput>
-                                <View style={styles.loginIcon1}></View>
+                                <ImageBackground style={styles.loginIcon} source={emailImage}></ImageBackground>
+                                <TextInput style={styles.loginInput1} placeholder={'Password'}></TextInput>
+                                <ImageBackground style={styles.loginIcon1} source={lockImage}></ImageBackground>
                                 <TouchableOpacity style={styles.loginButton} onPress={this.handlePress}>
-                                    <Text style={styles.loginButtonText}>Login</Text>
+                                <Text style={styles.loginButtonText}>Login</Text>
                                 </TouchableOpacity>
+                                <Text style={styles.loginInputTextBot}>Forgot username/password?</Text>
                             </View>
                         </View>
-                    </View>
-                </ImageBackground>
+                    </ImageBackground>
+                </View>
             </ScrollView>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    loginContainer: {
+    loginContainer:{
         flex: 1,
-        backgroundColor: Colors.white,
     },
     loginBackground: {
-        // backgroundColor: '#cccccc',
-        backgroundColor: Colors.white,
-        opacity: 5,
+        opacity: 0.85,
+        backgroundColor: Colors.whiteLight,
         width: '80%',
-        height: '80%',
-        marginTop: '50%',
-        marginVertical: 100,
+        height: '65%',
+        marginTop: '45%',
         borderRadius: 20,
-        borderColor: Colors.blackPearl,
+        borderColor: Colors.whiteLight,
         borderWidth: 4,
+        marginVertical: 400,
     },
-    loginLayerColor: {
+    layerColor: {
         flex: 2,
+        backgroundColor: Colors.greenLight,
+    },
+    image: {
+        height: '60%',
+        width: '100%',
+        marginTop: '30%',
+        flex: 1,
+        resizeMode: 'cover',
         justifyContent: 'center',
         alignItems: 'center',
     },
-    loginForm: {
+    form: {
         paddingHorizontal: 20,
     },
     loginInput: {
         marginTop: '10%',
         height: '18%',
-        fontSize: 30,
-        color: '#42494f',
+        fontSize: 25,
+        color: Colors.black,
         paddingVertical: 5,
         paddingHorizontal: 30,
         paddingLeft: 100,
         borderWidth: 2,
-        borderRadius: 40,
-        borderColor: '#42494f',
+        borderRadius: 30,
+        borderColor: Colors.black,
+    },
+    loginInput1: {
+        marginTop: '-20%',
+        height: '18%',
+        fontSize: 25,
+        color: Colors.black,
+        paddingVertical: 5,
+        paddingHorizontal: 30,
+        paddingLeft: 100,
+        borderWidth: 2,
+        borderRadius: 30,
+        borderColor: Colors.black,
     },
     loginInputText: {
-        fontSize: 40,
-        marginTop: '8%',
+        fontSize: 30,
+        textAlign: 'center',
+        color: Colors.black,
+        marginTop: '5%',
+    },
+    loginInputTextBot: {
+        fontSize: 20,
+        marginTop: '6%',
         textAlign: 'center',
         color: Colors.charade,
         marginBottom: 5,
+        marginVertical: 100,
     },
     loginButton: {
         width: '100%',
-        height: '16%',
+        height: '17%',
         padding: 15,
-        marginTop: '19%',
+        marginTop: '-15%',
         borderRadius: 30,
-        backgroundColor: '#121212cc',
+        backgroundColor: Colors.blueDark,
         borderWidth: 1,
     },
     loginButtonText: {
-        marginTop: '-5%',
+        marginTop: '-3%',
         textAlign: 'center',
         fontSize: 30,
         fontWeight: 'bold',
         color: Colors.white,
     },
-    image: {
-        flex: 1,
-        resizeMode: 'cover',
-        justifyContent: 'center',
+    loginIcon: {
+        width: '60%',
+        height: '30%',
+        marginTop: '-20%',
+        marginLeft: '2%',
     },
     loginIcon1: {
-        backgroundColor: Colors.Azabache,
-        width: '25%',
-        height: '14%',
+        width: '40%',
+        height: '35%',
         marginTop: '-23%',
-        marginLeft: '10%',
+        marginLeft: '13%',
     },
 });
 
-export default LogIn;
+export default SignUp;
