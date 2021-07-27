@@ -54,7 +54,6 @@ class SignUp extends React.Component {
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: Colors.charade,
     },
     signBackground: {
         opacity: 0.8,
@@ -97,29 +96,26 @@ const styles = StyleSheet.create({
     inputText: {
         fontSize: 30,
         textAlign: 'center',
-        color: Colors.charade,
         marginBottom: 5,
     },
     inputTextBot: {
         fontSize: 20,
         marginTop: '2%',
         textAlign: 'center',
-        color: Colors.charade,
         marginBottom: 5,
         marginVertical: 100,
     },
     button: {
-        width: '60%',
+        width: '100%',
         height: '5.8%',
         padding: 15,
         marginTop: '13%',
-        marginLeft: '20%',
         borderRadius: 30,
-        backgroundColor: '#121212cc',
+        backgroundColor: Colors.blueDark,
         borderWidth: 1,
     },
     buttonText: {
-        marginTop: '-8%',
+        marginTop: '-4%',
         textAlign: 'center',
         fontSize: 30,
         fontWeight: 'bold',
