@@ -1,9 +1,12 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import BadgeLanding from '../BadgeLanding/BadgeLanding'
-import SignUp from '../SignUp/SignUp'
 import LogIn from '../LogIn/LogIn'
+import SignUp from '../SignUp/SignUp'
+import Landing from '../Landing/Landing'
+import Profile from '../Profile/Profile'
+import EditProfile from '../EditProfile/EditProfile'
 import ScoreBoards from '../ScoreBoards/ScoreBoards'
+import BadgeLanding from '../BadgeLanding/BadgeLanding'
 
 const Stack = createStackNavigator(); 
 
@@ -16,8 +19,11 @@ const BadgesStack = () => {
             options={{headerShown: false}}
             />
             <Stack.Screen name="Login" component={LogIn}/>
+            <Stack.Screen name="Land" component={Landing}/>
             <Stack.Screen name="Sign up" component={SignUp}/>
+            <Stack.Screen name="Profile" component={Profile}/>
             <Stack.Screen name="Scoreboards" component={ScoreBoards}/>
+            <Stack.Screen name="Edit Profile" component={EditProfile}/>
            </Stack.Navigator>
     )
 }
