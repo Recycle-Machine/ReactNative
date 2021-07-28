@@ -16,7 +16,7 @@ import Colors from '../../res/Colors'
 
     class EditProfile extends React.Component{
         handlePress = () => {
-            this.props.navigation.navigate('Materials');
+            this.props.navigation.navigate('Materials Year');
         };
 
         render(){
