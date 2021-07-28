@@ -9,10 +9,10 @@ import {
 import Colors from '../../res/Colors'
 
     const bottleImage1Today = {
-        uri: 'https://www.dropbox.com/s/ziyj8jdbk1xyvo6/friends.png?raw=1',
+        uri: 'https://www.dropbox.com/s/td9t6fs54ttdsbd/icons8-botella-de-agua-50.png?raw=1',
     };
     const canImage1Today = {
-        uri: 'https://www.dropbox.com/s/jynq9pd7tlg7xin/career.png?raw=1',
+        uri: 'https://www.dropbox.com/s/ewr3ngkalfox4lx/icons8-bote-de-cerveza-50.png?raw=1',
     };
 
 class MaterialsMonth extends React.Component {
@@ -30,7 +30,9 @@ class MaterialsMonth extends React.Component {
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.materialsMonthButton} onPress={this.handlePress}>
                         <Text style={styles.materialsMonthButtonText}>4 kgs of aluminum</Text>
+                        <View style={styles.bottleImageMonthBack}>
                         <ImageBackground style={styles.monthIcon1} source={bottleImage1Today}></ImageBackground>
+                        </View>
                     </TouchableOpacity>
                     <Text style={styles.materialsMonthText}>
                         Km 3.5 Carretera Chihuahua a
@@ -43,7 +45,9 @@ class MaterialsMonth extends React.Component {
                     </Text>
                     <TouchableOpacity style={styles.materialsMonthButton} onPress={this.handlePress}>
                         <Text style={styles.materialsMonthButtonText}>5 kgs of plastic</Text>
+                        <View style={styles.canImageMonthBack}>
                         <ImageBackground style={styles.monthIcon2} source={canImage1Today}></ImageBackground>
+                        </View>
                     </TouchableOpacity>
                     <Text style={styles.materialsMonthText}>
                         Km 3.5 Carretera Chihuahua a
@@ -125,16 +129,32 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     monthIcon1: {
-        width: '40%',
+        width: '90%',
+        height: '95%',
+        marginTop: '5%',
+        marginLeft: '10%',
+    },
+    bottleImageMonthBack: {
+        width: '18%',
         height: '90%',
-        marginTop: '-12%',
-        marginLeft: '6%'
+        marginTop: '-12.5%',
+        marginLeft: '8%',
+        backgroundColor: Colors.greenLight,
+        borderRadius: 70,
     },
     monthIcon2: {
-        width: '40%',
+        width: '90%',
+        height: '95%',
+        marginTop: '5%',
+        marginLeft: '10%',
+    },
+    canImageMonthBack: {
+        width: '18%',
         height: '90%',
-        marginTop: '-12%',
-        marginLeft: '6%'
+        marginTop: '-12.5%',
+        marginLeft: '8%',
+        backgroundColor: Colors.greenLight,
+        borderRadius: 70,
     },
 });
 
