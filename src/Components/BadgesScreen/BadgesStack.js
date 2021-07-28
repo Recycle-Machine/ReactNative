@@ -7,6 +7,10 @@ import Profile from '../Profile/Profile'
 import EditProfile from '../EditProfile/EditProfile'
 import ScoreBoards from '../ScoreBoards/ScoreBoards'
 import BadgeLanding from '../BadgeLanding/BadgeLanding'
+import MaterialsYear from '../MaterialsYear/MaterialsYear'
+import MaterialsToday from '../MaterialsToday/MaterialsToday'
+import MaterialsMonth from '../MaterialsMonth/MaterialsMonth'
+import MaterialsIndex from '../MaterialsIndex/MaterialsIndex'
 
 const Stack = createStackNavigator(); 
 
@@ -24,6 +28,10 @@ const BadgesStack = () => {
             <Stack.Screen name="Profile" component={Profile}/>
             <Stack.Screen name="Scoreboards" component={ScoreBoards}/>
             <Stack.Screen name="Edit Profile" component={EditProfile}/>
+            <Stack.Screen name="Materials" component={MaterialsIndex}/>
+            <Stack.Screen name="Materials Year" component={MaterialsYear}/>
+            <Stack.Screen name="Materials Today" component={MaterialsToday}/>
+            <Stack.Screen name="Materials Month" component={MaterialsMonth}/>
            </Stack.Navigator>
     )
 }
