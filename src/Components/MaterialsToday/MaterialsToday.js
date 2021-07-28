@@ -9,10 +9,10 @@ import {
 import Colors from '../../res/Colors'
 
     const bottleImageToday = {
-        uri: 'https://www.dropbox.com/s/ziyj8jdbk1xyvo6/friends.png?raw=1',
+        uri: 'https://www.dropbox.com/s/td9t6fs54ttdsbd/icons8-botella-de-agua-50.png?raw=1',
     };
     const canImageToday = {
-        uri: 'https://www.dropbox.com/s/jynq9pd7tlg7xin/career.png?raw=1',
+        uri: 'https://www.dropbox.com/s/ewr3ngkalfox4lx/icons8-bote-de-cerveza-50.png?raw=1',
     };
 
 class MaterialsToday extends React.Component {
@@ -30,7 +30,9 @@ class MaterialsToday extends React.Component {
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.materialsTodayButton} onPress={this.handlePress}>
                         <Text style={styles.materialsTodayButtonText}>4 kgs of aluminum</Text>
+                        <View style={styles.bottleImageTodayBack}>
                         <ImageBackground style={styles.todayIcon1} source={bottleImageToday}></ImageBackground>
+                        </View>
                     </TouchableOpacity>
                     <Text style={styles.materialsTodayText}>
                         Km 3.5 Carretera Chihuahua a
@@ -43,7 +45,9 @@ class MaterialsToday extends React.Component {
                     </Text>
                     <TouchableOpacity style={styles.materialsTodayButton} onPress={this.handlePress}>
                         <Text style={styles.materialsTodayButtonText}>5 kgs of plastic</Text>
+                        <View style={styles.canImageTodayBack}>
                         <ImageBackground style={styles.todayIcon2} source={canImageToday}></ImageBackground>
+                        </View>
                     </TouchableOpacity>
                     <Text style={styles.materialsTodayText}>
                         Km 3.5 Carretera Chihuahua a
@@ -125,16 +129,32 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     todayIcon1: {
-        width: '40%',
+        width: '90%',
         height: '90%',
-        marginTop: '-12%',
-        marginLeft: '6%'
+        marginTop: '5%',
+        marginLeft: '10%',
+    },
+    bottleImageTodayBack: {
+        width: '18%',
+        height: '90%',
+        marginTop: '-12.5%',
+        marginLeft: '8%',
+        backgroundColor: Colors.greenLight,
+        borderRadius: 70,
     },
     todayIcon2: {
-        width: '40%',
+        width: '90%',
+        height: '95%',
+        marginTop: '5%',
+        marginLeft: '10%',
+    },
+    canImageTodayBack: {
+        width: '18%',
         height: '90%',
-        marginTop: '-12%',
-        marginLeft: '6%'
+        marginTop: '-12.5%',
+        marginLeft: '8%',
+        backgroundColor: Colors.greenLight,
+        borderRadius: 70,
     },
 });
 
