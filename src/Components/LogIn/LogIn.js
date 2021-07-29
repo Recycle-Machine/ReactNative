@@ -20,9 +20,9 @@ import Colors from '../../res/Colors'
         uri: 'https://www.dropbox.com/s/utr2u7j6aoktlp3/lock.png?raw=1',
     };
 
-class SignUp extends React.Component {
+class LogIn extends React.Component {
     handlePress = () => {
-        this.props.navigation.navigate('Scoreboards');
+        this.props.navigation.navigate('NavbarDivisions');
     };
 
     render() {
@@ -149,4 +149,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default SignUp;
+export default LogIn;
