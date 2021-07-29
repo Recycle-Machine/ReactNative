@@ -1,11 +1,7 @@
 import React from 'react'
 import {
     View,
-    Text,
-    TextInput,
     StyleSheet,
-    ScrollView,
-    TouchableOpacity,
     ImageBackground,
 } from 'react-native'
 import Colors from '../../res/Colors'
