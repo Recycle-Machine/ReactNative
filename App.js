@@ -1,11 +1,11 @@
 import React from "react"
 import { NavigationContainer } from "@react-navigation/native"
-import BadgesStack from "./src/Components/BadgesScreen/BadgesStack.js";
+import AppStack from "./src/Components/AppNavigator/AppStack";
 
 const App = () => {
   return(
   <NavigationContainer>
-    <BadgesStack/>
+    <AppStack/>
   </NavigationContainer>
   );
 };
