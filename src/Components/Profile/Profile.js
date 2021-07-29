@@ -67,7 +67,7 @@ import Colors from '../../res/Colors'
     const styles = StyleSheet.create({
         profileContainer: {
             flex: 1,
-            marginTop: '-45%',
+            marginTop: '-35%',
         },
         profileAll: {
             marginVertical: 300,
