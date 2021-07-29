@@ -16,7 +16,7 @@ import Colors from '../../res/Colors'
 
     class EditProfile extends React.Component{
         handlePress = () => {
-            this.props.navigation.navigate('Materials Year');
+            this.props.navigation.navigate('NavbarDivisions');
         };
 
         render(){
@@ -67,7 +67,7 @@ import Colors from '../../res/Colors'
     const styles = StyleSheet.create({
         editProfileContainer: {
             flex: 1,
-            marginTop: '-45%',
+            marginTop: '-35%',
         },
         editProfileAll: {
             marginVertical: 300,
