@@ -14,7 +14,7 @@ import Colors from '../../res/Colors'
 
     class BadgeLanding extends React.Component{
         handlePress = () => {
-            this.props.navigation.replace('Machine');
+            this.props.navigation.replace('Yearly Goals');
         };
 
         render(){
