@@ -1,5 +1,6 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
+import Colors from '../../res/Colors'
 import Map from '../Map/Map'
 import Goals from '../Goals/Goals'
 import LogIn from '../LogIn/LogIn'
@@ -26,7 +27,11 @@ const BadgesStack = () => {
             <Stack.Screen 
             name='Landing' 
             component={BadgeLanding}
-            options={{headerShown: false}}
+            options={{headerShown: false,
+                headerStyle: {
+                    BackgroundColor: Colors.black,
+                },
+            }}
             />
             <Stack.Screen name="Map" component={Map}/>
             <Stack.Screen name="Goals" component={Goals}/>
