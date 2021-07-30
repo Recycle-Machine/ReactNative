@@ -5,6 +5,7 @@ import {
     StyleSheet, 
     ImageBackground,
     StatusBar,
+    TouchableOpacity,
  } from 'react-native'
 import * as Progress from 'react-native-progress';
 import Colors from '../../res/Colors'
@@ -21,7 +22,7 @@ import Colors from '../../res/Colors'
 
     class Goals extends React.Component{
         handlePress = () => {
-            this.props.navigation.navigate('goals Today');
+            this.props.navigation.navigate('NavbarGoals');
         };
 
         render(){
@@ -38,8 +39,11 @@ import Colors from '../../res/Colors'
                             <Progress.Pie progress={0.5} size={125} marginTop={'-25%'} color={Colors.blueDark} />
                             <Text style={styles.goalsButtonText1}>24 kgs of aluminum</Text>
                             <ImageBackground style={styles.goalsIcon2} source={goalsCanImage}></ImageBackground>
-                            <Progress.Pie progress={0.5} size={125} marginTop={'-25%'} color={Colors.blueDark} />
+                            <Progress.Pie progress={0.5} size={125} marginTop={'-30%'} color={Colors.blueDark} />
                             <ImageBackground source={goalsImage} style={styles.goalsImage}></ImageBackground>
+                            <TouchableOpacity style={styles.goalsButtonNavbar} onPress={this.handlePress}>
+                            <Text style={styles.goalsButtonNavbarText}>See More</Text>
+                            </TouchableOpacity>
                         </View>
                 </View>
             );
@@ -57,9 +61,9 @@ import Colors from '../../res/Colors'
             alignItems: 'center',
         },
         goalsImage: {
-            height: '20%',
-            width: '50%',
-            marginTop: '-145%',
+            height: '25%',
+            width: '60%',
+            marginTop: '-135%',
             marginLeft: '-10%',
             flex: 1,
             resizeMode: 'cover',
@@ -90,7 +94,7 @@ import Colors from '../../res/Colors'
         },
         goalsButtonText1: {
             marginLeft: '5%',
-            marginTop: '15%',
+            marginTop: '5%',
             fontSize: 22,
             fontWeight: 'bold',
             color: Colors.black,
@@ -106,6 +110,19 @@ import Colors from '../../res/Colors'
             height: '25%',
             marginTop: '-10%',
             marginLeft: '-45%'
+        },
+        goalsButtonNavbar: {
+            backgroundColor: Colors.blueDark,
+            width: '40%',
+            height: '10%',
+            marginBottom: '1%',
+            borderRadius: 30,
+        },
+        goalsButtonNavbarText: {
+            textAlign: 'center',
+            color: Colors.white,
+            marginTop: '8%',
+            fontSize: 30,
         },
     });
 
