@@ -9,7 +9,7 @@ import Colors from '../../res/Colors'
 
 class Landing extends React.Component {
     handlePress = () => {
-        this.props.navigation.navigate('Profile');
+        this.props.navigation.navigate('NavbarDivisions');
     };
 
     render() {
@@ -22,16 +22,7 @@ class Landing extends React.Component {
                         start recycling and earn wonderful rewards
                     </Text>
                     <TouchableOpacity style={styles.landButton} onPress={this.handlePress}>
-                        <Text style={styles.landButtonText}>ScoreBoards</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.landButton} onPress={this.handlePress}>
-                        <Text style={styles.landButtonText}>Record</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.landButton} onPress={this.handlePress}>
-                        <Text style={styles.landButtonText}>Map</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.landButton} onPress={this.handlePress}>
-                        <Text style={styles.landButtonText}>Goals</Text>
+                        <Text style={styles.landButtonText}>Main Menu</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -48,13 +39,14 @@ const styles = StyleSheet.create({
         width: '90%',
         fontSize: 25,
         fontWeight: 'bold',
-        marginTop: '-1%',
+        marginTop: '-40%',
         textAlign: 'center',
         color: Colors.white,
     },
     landInputText1: {
         width: '80%',
         fontSize: 20,
+        fontWeight: 'bold',
         marginTop: '1%',
         marginLeft: '-5%',
         textAlign: 'left',
@@ -72,7 +64,7 @@ const styles = StyleSheet.create({
         width: '80%',
         height: '13%',
         padding: 15,
-        marginTop: '8%',
+        marginTop: '50%',
         borderRadius: 50,
         borderWidth: 1,
     },
