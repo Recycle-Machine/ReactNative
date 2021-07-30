@@ -3,6 +3,7 @@ import {
     View,
     Text,
     StyleSheet,
+    TouchableOpacity,
     ImageBackground,
 } from 'react-native'
 import Colors from '../../res/Colors'
@@ -19,7 +20,7 @@ import Colors from '../../res/Colors'
 
 class MapMachine extends React.Component {
     handlePress = () => {
-        this.props.navigation.navigate('Scoreboards');
+        this.props.navigation.navigate('Map');
     };
 
     render() {
@@ -35,9 +36,9 @@ class MapMachine extends React.Component {
                                 <View style={styles.machineImageBack}>
                                 <ImageBackground source={machineImage} style={styles.machineImage}></ImageBackground>
                                 </View>
-                                <View style={styles.machineButton} onPress={this.handlePress}>
+                                <TouchableOpacity style={styles.machineButton} onPress={this.handlePress}>
                                 <Text style={styles.machineButtonText}>Takes</Text>
-                                </View>
+                                </TouchableOpacity>
                                 <View style={styles.machineIconBack}>
                                 <ImageBackground style={styles.machineIcon} source={machineBottleImage}></ImageBackground>
                                 </View>
@@ -159,7 +160,7 @@ const styles = StyleSheet.create({
     machineIconBack: {
         width: '20%',
         height: '15%',
-        marginTop: '-25%',
+        marginTop: '-26%',
         marginLeft: '45%',
         backgroundColor: Colors.greenLight,
         borderRadius: 75,
@@ -173,7 +174,7 @@ const styles = StyleSheet.create({
     machineIconBack1: {
         width: '20%',
         height: '15%',
-        marginTop: '-23%',
+        marginTop: '-24%',
         marginLeft: '70%',
         backgroundColor: Colors.greenLight,
         borderRadius: 75,
