@@ -22,7 +22,7 @@ import Colors from '../../res/Colors'
 
 class LogIn extends React.Component {
     handlePress = () => {
-        this.props.navigation.navigate('NavbarDivisions');
+        this.props.navigation.navigate('Land');
     };
 
     render() {
