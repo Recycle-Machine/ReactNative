@@ -20,7 +20,7 @@ import Colors from '../../res/Colors'
 
 class ScoreBoards extends React.Component {
     handlePress = () => {
-        this.props.navigation.navigate('Land');
+        this.props.navigation.navigate('NavbarScores');
     };
 
     render() {
