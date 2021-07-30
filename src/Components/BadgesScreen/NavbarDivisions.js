@@ -2,11 +2,11 @@ import React from 'react'
 import { Image } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Colors from '../../res/Colors'
+import Goals from '../Goals/Goals'
 import Landing from '../Landing/Landing'
 import Profile from '../Profile/Profile'
 import MapMachine from '../Map/MapMachine'
 import ScoreBoards from '../ScoreBoards/ScoreBoards'
-import NavbarGoals from '../BadgesScreen/NavbarGoals'
 
 const Tab = createBottomTabNavigator();
 
@@ -34,17 +34,6 @@ const NavbarDivisions = () => {
             }}
         >
             <Tab.Screen 
-                name="Land"
-                component={Landing}
-                options={{
-                    tabBarIcon: ({size, color}) => (
-                            <Image style={{tintColor: color, width: size, height: size}} 
-                            source={signupIcon}
-                        />
-                    ),
-                }}
-            />
-            <Tab.Screen 
                 name="ScoreBoards"
                 component={ScoreBoards}
                 options={{
@@ -67,8 +56,8 @@ const NavbarDivisions = () => {
                 }}
             />
             <Tab.Screen 
-                name="NavbarGoals"
-                component={NavbarGoals}
+                name="Goals"
+                component={Goals}
                 options={{
                     tabBarIcon: ({size, color}) => (
                             <Image style={{tintColor: color, width: size, height: size}} 
