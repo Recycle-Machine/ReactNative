@@ -33,17 +33,6 @@ const NavbarGoals = () => {
             }}
         >
             <Tab.Screen 
-                name="Goals"
-                component={Goals}
-                options={{
-                    tabBarIcon: ({size, color}) => (
-                            <Image style={{tintColor: color, width: size, height: size}} 
-                            source={signupIcon}
-                        />
-                    ),
-                }}
-            />
-            <Tab.Screen 
                 name="GoalsDaily"
                 component={GoalsDaily}
                 options={{
@@ -72,17 +61,6 @@ const NavbarGoals = () => {
                     tabBarIcon: ({size, color}) => (
                             <Image style={{tintColor: color, width: size, height: size}} 
                             source={loginIcon}
-                        />
-                    ),
-                }}
-            />
-            <Tab.Screen 
-                name="Profile"
-                component={Profile}
-                options={{
-                    tabBarIcon: ({size, color}) => (
-                            <Image style={{tintColor: color, width: size, height: size}} 
-                            source={profileIcon}
                         />
                     ),
                 }}
